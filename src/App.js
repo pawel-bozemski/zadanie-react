@@ -14,12 +14,12 @@ class App extends React.Component {
 
   componentDidUpdate(prevState) {
     if (prevState.click !== this.state.click) {
-      setTimeout(() => {
-        console.log("state clear");
+      setTimeout(() => {        
         this.setState({ ...initialState });
       }, 2000);
     }
   }
+  
 
   clickedBox = (e) => {
     this.setState((state) => ({
